@@ -1,0 +1,39 @@
+# Ignore LLaMA models
+models/*.gguf
+
+# Ignore Vosk models
+vosk-model/
+
+# Ignore Python virtual environment
+venv/
+.env/
+
+# Ignore build files and executables
+build/
+*.exe
+*.dll
+*.o
+*.out
+*.a
+
+# Ignore output audio and text files
+audio/*.mp3
+audio/*.wav
+audio/input.txt
+audio/output.txt
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore VS Code settings
+.vscode/
+
+# Ignore system files
+*.log
+.DS_Store
+Thumbs.db
+
+
