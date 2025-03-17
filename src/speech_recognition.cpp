@@ -4,7 +4,14 @@
 #include <cstdlib>
 
 std::string recognize_speech() {
-    std::system("\"C:\\Python313\\python.exe\" \"D:\\Voice_Controlled_Virtual_Assistant\\python\\recognize_speech.py\"");
+    std::cout << "🎤 Running speech recognition...\n";
+    
+    int ret = std::system("C:\\Python313\\python.exe D:/Voice_Controlled_Virtual_Assistant/python/recognize_speech.py");
+
+    if (ret != 0) {
+        std::cerr << "❌ Error: Failed to execute Python script." << std::endl;
+        return "";
+    }
 
     std::ifstream file("audio/input.txt");
     if (!file) {  
@@ -16,5 +23,10 @@ std::string recognize_speech() {
     std::getline(file, text);
     file.close();
 
-    return text.empty() ? "No speech detected" : text;
+    if (text.empty() || text == "No speech detected") {
+        std::cerr << "⚠️ No valid speech detected." << std::endl;
+        return "No speech detected";
+    }
+
+    return text;
 }

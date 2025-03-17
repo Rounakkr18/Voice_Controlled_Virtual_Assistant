@@ -8,7 +8,7 @@ if not os.path.exists(model_path):
     print(f"Error: Model file not found at {model_path}")
     sys.exit(1)
 
-llm = GPT4All(model_path)
+llm = GPT4All(model_path, device="cpu")
 
 if len(sys.argv) < 2:
     print("Error: No input provided. Please enter a message.")
