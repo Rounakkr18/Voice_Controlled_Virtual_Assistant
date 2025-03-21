@@ -20,7 +20,7 @@ build/
 audio/*.mp3
 audio/*.wav
 audio/input.txt
-audio/output.txt
+output.txt
 
 # Ignore Python cache files
 __pycache__/

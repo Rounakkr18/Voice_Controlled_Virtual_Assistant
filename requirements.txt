@@ -1,0 +1,10 @@
+vosk==0.3.45
+SpeechRecognition==3.14.1
+PyAudio==0.2.14
+gTTS==2.5.4
+pyttsx3==2.98
+gpt4all==2.8.2
+requests==2.32.3
+wikipedia==1.4.0
+tqdm==4.67.1
+colorama==0.4.6
